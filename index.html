@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letter to Santa</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <h1>Letter to Santa</h1>
+
+  <p>My dear friend,</p>
+  <p>I'm glad to see you in my virtual office.</p>
+  <p>Tell me bit about yourself</p>
+  
+  <form method="get" id="signUp-form">
+    <div>
+        <label>
+          Name<span class="required">*</span>
+          <input required type="text" placeholder="Enter your name here">
+        </label>
+      </div>
+
+    <div>
+      <label>
+        Surname<span class="required">*</span>
+        <input required type="text" placeholder="Enter your surname here">
+      </label>
+    </div>
+    <div>
+      <label>
+        School address<span class="required">*</span>
+        <input required type="text" placeholder="Enter your school address here">
+      </label>
+    </div>
+    <div>
+      <label>
+        form<span class="required">*</span>
+        <input required type="text" placeholder="Enter your form here">
+      </label>
+    </div>
+
+    <div>
+        <label for="birth_date">Date of Birth
+        <input type="date" id="birth_date" name="birthDate"
+               value="2000-01-01"
+               min="1950-01-01" max="2023-01-01">
+        </label>
+    </div>
+
+    <div>
+      <label>Gender:</label>
+      <div class="gender-options">
+        <label>
+          <input type="radio" name="gender" value="male"> boy
+        </label>
+        <label>
+          <input type="radio" name="gender" value="female"> girl
+        </label>
+        <label>
+          <input type="radio" name="gender" value="other"> other
+        </label>
+      </div>
+    </div>
+
+    <label for="country">Country: 
+        <select id="country" name="country">
+          
+      <option value="">Select your country</option>
+      <option value="france">France</option>
+      <option value="germany">Germany</option>
+      <option value="russia">Russia Federation</option>
+      <option value="uk">UK</option>
+      <option value="ukraine">Ukraine</option>
+      <option value="usa">USA</option>
+    </label>
+    </select><br><br>
+
+    <div>
+      <label>
+        City<span class="required"></span>
+        <input required type="text" placeholder="Enter your city here">
+      </label>
+    </div>
+
+  <form method="post" action="/submit-letter">
+    <div>
+      <label>Have you been obedient all year?</label>
+      <div class="answer">
+        <label>
+        <input type="radio" name="answer" value="yes"> yes
+        </label>
+        <label>
+          <input type="radio" name="answer" value="no"> no
+          </label>
+      </div>
+    </div>
+
+    <div>
+      <label for="parents-obedience">Did you obey your parents?</label>
+      <div class="answer">
+        <label>
+        <input type="radio" name="answer" value="yes"> yes
+        
+        <input type="radio" name="answer" value="no"> no
+        </label>
+      </div>
+    </div>
+
+    <p>
+    Here you can tell me as much as you can about yourself.
+    How did you spend your year?
+    How many new friends did you meet?
+    Who did you help?
+    What would you like to achieve in the New Year?
+    What are you waiting for this Christmas?</p>
+
+    <div>
+      <label for="letter-text"> Write your letter to Santa:</label>
+      <textarea id="letter-text" name="letter-text" cols="73" rows="10"></textarea>
+    </div>
+    
+    <input type="hidden" name="date-filled" value="2023-06-30">
+
+  </form>
+  <button type="send">Send the letter to Santa</button>
+
+</form>
+</body>
+</html>
